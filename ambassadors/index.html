@@ -196,13 +196,6 @@
       var toastTimer;
       var image = document.getElementById('announcement-image');
       var download = document.getElementById('download-image');
-      var imageBytes = atob(image.src.split(',')[1]);
-      var imageArray = new Uint8Array(imageBytes.length);
-      for (var imageIndex = 0; imageIndex < imageBytes.length; imageIndex++) {
-        imageArray[imageIndex] = imageBytes.charCodeAt(imageIndex);
-      }
-      var imageBlob = new Blob([imageArray], {type:'image/png'});
-      download.href = URL.createObjectURL(imageBlob);
       function message(text) {
         clearTimeout(toastTimer);
         toast.textContent = text;
