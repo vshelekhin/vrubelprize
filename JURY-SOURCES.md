@@ -55,19 +55,19 @@
 - Галерея собственных акварелей: https://kuzema.my1.ru/photo/22
 - Портрет: `https://kuzema.my1.ru/_ph/68/198506897.jpg` (650×647, без водяного знака).
 
-Владимир выбрал из общего списка 25 изображений номера **2, 6, 9, 11, 19, 20, 21, 22, 23, 24, 25**. На странице размещены только эти 11 работ, в указанном порядке. Остальные ранее опубликованные работы и их превью удалены из рабочей копии репозитория. Нумерация в таблице ниже соответствует списку для выбора; порядок галереи — слева.
+Владимир выбрал из общего списка 25 изображений номера **2, 6, 9, 11, 19, 20, 21, 22, 23, 24, 25**. На странице размещены только эти 11 работ. Затем по указанию Владимира №23 с Ростральной колонной перенесён из правой колонки в левую, чтобы приблизить их высоту. Остальные ранее опубликованные работы и их превью удалены из рабочей копии репозитория. Нумерация в таблице ниже соответствует списку для выбора; порядок галереи — слева.
 
 | Порядок | № в списке | Описание | Файл | Источник |
 |---|---|---|---|---|
 | 1 | 2 | Ночной трамвай | `konstantin-kuzema-2.webp` | [Источник](https://kuzema.my1.ru/photo/4-0-68) |
 | 2 | 6 | Мелодии Петербурга | `konstantin-kuzema-6.webp` | [Источник](https://kuzema.my1.ru/photo/4-0-26) |
 | 3 | 9 | Город в золотистом свете | `konstantin-kuzema-selection-09.webp` | [Источник](https://kuzema.my1.ru/photo/fotografija_1/10-0-2924) |
-| 4 | 11 | Смольный собор в открытом космосе | `konstantin-kuzema-selection-11.webp` | [Источник](https://kuzema.my1.ru/photo/10-0-145) |
-| 5 | 19 | Петропавловский собор зимой | `konstantin-kuzema-selection-19.webp` | [Источник](https://s1.babiki.ru/uploads/images/01/18/91/2017/06/26/c53059.jpg) |
-| 6 | 20 | Исаакиевский собор и Адмиралтейская набережная зимой | `konstantin-kuzema-selection-20.webp` | [Источник](https://i.ytimg.com/vi/N_sLTnkEPec/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgYShYMA8=&rs=AOn4CLCMCgg_oOiMtIrGq7gTwfxdxjjGdQ) |
-| 7 | 21 | Исаакиевский собор | `konstantin-kuzema-selection-21.webp` | [Источник](https://i.pinimg.com/originals/a7/96/0c/a7960c3ded2d99b58cd7dc12fb92c38c.jpg) |
-| 8 | 22 | Дворцовая площадь в облаках | `konstantin-kuzema-selection-22.webp` | [Источник](https://i.pinimg.com/originals/d0/4e/aa/d04eaa89e160aa51f18491ad85b946d0.jpg) |
-| 9 | 23 | Ростральная колонна | `konstantin-kuzema-selection-23.webp` | [Источник](https://i.ytimg.com/vi/PkRrfHH7kUo/maxresdefault.jpg) |
+| 4 | 23 | Ростральная колонна | `konstantin-kuzema-selection-23.webp` | [Источник](https://i.ytimg.com/vi/PkRrfHH7kUo/maxresdefault.jpg) |
+| 5 | 11 | Смольный собор в открытом космосе | `konstantin-kuzema-selection-11.webp` | [Источник](https://kuzema.my1.ru/photo/10-0-145) |
+| 6 | 19 | Петропавловский собор зимой | `konstantin-kuzema-selection-19.webp` | [Источник](https://s1.babiki.ru/uploads/images/01/18/91/2017/06/26/c53059.jpg) |
+| 7 | 20 | Исаакиевский собор и Адмиралтейская набережная зимой | `konstantin-kuzema-selection-20.webp` | [Источник](https://i.ytimg.com/vi/N_sLTnkEPec/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgYShYMA8=&rs=AOn4CLCMCgg_oOiMtIrGq7gTwfxdxjjGdQ) |
+| 8 | 21 | Исаакиевский собор | `konstantin-kuzema-selection-21.webp` | [Источник](https://i.pinimg.com/originals/a7/96/0c/a7960c3ded2d99b58cd7dc12fb92c38c.jpg) |
+| 9 | 22 | Дворцовая площадь в облаках | `konstantin-kuzema-selection-22.webp` | [Источник](https://i.pinimg.com/originals/d0/4e/aa/d04eaa89e160aa51f18491ad85b946d0.jpg) |
 | 10 | 24 | Крепость на воде в закатном свете | `konstantin-kuzema-selection-24.webp` | [Источник](https://kuzema.my1.ru/_si/0/03819680.jpg) |
 | 11 | 25 | Панорама Невы и Стрелки Васильевского острова | `konstantin-kuzema-selection-25.webp` | [Источник](https://sun9-3.userapi.com/impf/Jo5Ki0XbIOMWcS1R0vFJvZy0_QLkGkwdH5ip0g/wGBqwrbaKRc.jpg?size=1920x768&quality=95&crop=30,0,1019,407&sign=a0de2d08e6a93038d06a01fdc29b8f81&type=cover_group) |
 
