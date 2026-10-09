@@ -40,12 +40,26 @@
 
 ## Анна Иванова
 
-- Биография, преподавание с 2013 года, портрет и все восемь акварелей: https://enterclass.com/ru/expert/3312
+- Биография, преподавание с 2013 года, портрет и все десять акварелей: https://enterclass.com/ru/expert/3312
 - Награды, Fabriano 2015, золотая медаль Мексика 2016, биеннале Бриуд 2017/2019: https://www.artmanu.se/en/pages/artists/anna-ivanova
 - Портрет: `https://enterclass.com/upload/img/thumbs/expert_img/userprofile/image/ivanova1080h1080_61a5b9d872aa6.jpg` (600×600, без водяного знака).
-- Работы: `portrait-022-lg_5a77fde5eb052.jpg`, `ballet-003-lg_5a77fdb76ccc7.jpg`, `ivanovabalet2_5a77fdc1011c2.jpg`, `20916823101556955623309721052307271n_5a77fdbb36efe.jpg`, `2088517010155695562515972766602348n_5a77fdb31896e.jpg`, `portrait-010-lg_5a77fdc9efb35.jpg`, `life-007-lg_5a77fde1a54b7.jpg`, `landscape-006-lg_5a77fddfe37bb.jpg`.
 
-Исправление 09.10 по указанию Владимира: шестое изображение из Art Manu оказалось чужой фотографией натюрморта, а не акварелью. Оно удалено из текущей рабочей копии вместе с превью. На его месте — акварельный портрет певца у микрофона из галереи Анны Ивановой на Enterclass (`anna-ivanova-6-singer.webp`). Новое имя файла исключает показ старой фотографии из кеша. Все остальные семь изображений проверены визуально и по их принадлежности галерее художника в источнике.
+Владимир выбрал из общего списка 20 изображений номера **1, 2, 3, 4, 7, 9, 6, 8, 19, 11**. На странице размещены только эти десять работ. Для выравнивания трёх колонок №6 поставлен перед №9: порядок **1, 2, 3 / 4, 7, 6 / 9, 8, 19, 11**. Портрет лошади №5 и его превью удалены из рабочей копии репозитория. Нумерация ниже соответствует списку для выбора.
+
+| Порядок | № в списке | Описание | Файл | Источник |
+|---|---|---|---|---|
+| 1 | 1 | Портрет девушки в национальном костюме | `anna-ivanova-1.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/portrait-022-lg_5a77fde5eb052.jpg) |
+| 2 | 2 | Балерина, поправляющая пуанты | `anna-ivanova-2.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/ballet-003-lg_5a77fdb76ccc7.jpg) |
+| 3 | 3 | Балерины за кулисами | `anna-ivanova-3.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/ivanovabalet2_5a77fdc1011c2.jpg) |
+| 4 | 4 | Две лошади | `anna-ivanova-4.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/20916823101556955623309721052307271n_5a77fdbb36efe.jpg) |
+| 5 | 7 | Натюрморт с кувшином и гранатом | `anna-ivanova-7.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/life-007-lg_5a77fde1a54b7.jpg) |
+| 6 | 6 | Портрет певца у микрофона | `anna-ivanova-6-singer.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/portrait-010-lg_5a77fdc9efb35.jpg) |
+| 7 | 9 | Бегущие лошади | `anna-ivanova-selection-09.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/animal-010-lg_5a77fdd3cafed.jpg) |
+| 8 | 8 | Городской пейзаж | `anna-ivanova-8.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/landscape-006-lg_5a77fddfe37bb.jpg) |
+| 9 | 19 | Венеция и розовое небо | `anna-ivanova-selection-19.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/landscape-003-lg_5a77fdddef2f5.jpg) |
+| 10 | 11 | Балерина перед зеркалом | `anna-ivanova-selection-11.webp` | [Источник](https://enterclass.com/upload/img/thumbs/source/userprofileimage/image/ivanovabalet1_5a77fdbf5b70d.jpg) |
+
+Ранее ошибочно добавленная чужая фотография натюрморта из Art Manu удалена вместе с превью; №6 — акварельный портрет певца у микрофона из галереи Анны Ивановой на Enterclass. Все выбранные изображения проверены по этой галерее. Полные композиции, пропорции и авторские подписи сохранены; изображения не ретушировались и не обрезались.
 
 На странице использовано точное обозначение награды Shanghai 2012 — Excellence Award, без утверждения о главном призе. Описания изображений в alt — по видимым сюжетам, не названия произведений; ошибочная подпись «Коли» у изображения двух лошадей в источнике не перенесена. Возраст, продажи курсов и неподтверждённое членство не добавлялись.
 
@@ -73,4 +87,4 @@
 
 Для №20 и №23 обрезаны только цветные боковые поля видеопревью. Композиции, пропорции самих картин и авторские подписи сохранены. У остальных работ сохранены полные предоставленные изображения. №19–25 взяты по ссылкам, предоставленным Владимиром; описания их сюжетов в alt не заявлены как авторские названия.
 
-На странице Ивановой восемь работ, на странице Куземы — одиннадцать; без видимых подписей, с лёгкими WebP-превью и увеличенными версиями. Изображения не ретушировались. Полная карта актуальных источников — `outputs/2026-10-09-jury-pages/published-manifest.json`; общий список для выбора и утверждённый набор — `outputs/2026-10-09-kuzema-full-selection/` в основном рабочем проекте.
+На странице Ивановой десять работ, на странице Куземы — одиннадцать; без видимых подписей, с лёгкими WebP-превью и увеличенными версиями. Изображения не ретушировались. Полная карта актуальных источников — `outputs/2026-10-09-jury-pages/published-manifest.json`; общий список для выбора и утверждённый набор — `outputs/2026-10-09-kuzema-full-selection/` в основном рабочем проекте.
