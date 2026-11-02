@@ -7,9 +7,9 @@
   <meta name="description" content="Тестовое парное голосование Премии Михаила Врубеля.">
   <title>Выбор зрителя — Премия Михаила Врубеля</title>
   <link rel="icon" href="../favicon.svg">
-  <link rel="stylesheet" href="style.css?v=20">
+  <link rel="stylesheet" href="style.css?v=fast1">
   <script src="config.js" defer></script>
-  <script src="app.js?v=20-final" defer></script>
+  <script src="app.js?v=fast1" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -55,8 +55,8 @@
           <button class="choose-button" type="button" data-side="1">Выбрать эту картину <span>→</span></button>
         </article>
       </div>
-      <div id="finished" class="finished" hidden><p class="eyebrow">ГОЛОСОВАНИЕ ЗАВЕРШЕНО</p><h2>Спасибо за участие!</h2><p id="finish-description">Все ваши голоса сохранены. Голосование завершено.</p></div>
-      <div class="voting-footer"><div class="progress"><span id="progress-text">Сравнений: 0 из 20</span><div class="progress-line"><i id="progress-fill"></i></div></div><p id="decision-hint">Правильного ответа нет.<br>Доверьтесь своему впечатлению.</p><span id="keyboard-hint" class="keyboard-hint">Выбрать: <kbd>←</kbd> <kbd>→</kbd></span></div>
+      <div id="finished" class="finished" hidden><p id="finish-eyebrow" class="eyebrow">ГОЛОСОВАНИЕ ЗАВЕРШЕНО</p><h2 id="finish-title">Спасибо за участие!</h2><p id="finish-description">Все ваши голоса сохранены. Голосование завершено.</p></div>
+      <div class="voting-footer"><div class="progress"><span id="progress-text">Сравнений: 0 из 20</span><div class="progress-line"><i id="progress-fill"></i></div><span id="saved-text" class="saved-text" hidden></span></div><p id="decision-hint">Правильного ответа нет.<br>Доверьтесь своему впечатлению.</p><span id="keyboard-hint" class="keyboard-hint">Можно выбирать стрелками ← → на клавиатуре</span></div>
     </section>
     <div id="message" class="message" role="status" aria-live="polite"></div>
     <button id="retry" class="retry text-button" type="button" hidden>Повторить сохранение</button>
