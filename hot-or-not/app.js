@@ -70,13 +70,17 @@
   }
   function preload(art){
     const url=new URL(art.image,document.baseURI).href;
-    if(imageCache.has(url))return imageCache.get(url);
-    const promise=new Promise((resolve,reject)=>{
-      const img=new Image();
-      img.onload=async()=>{try{if(img.decode)await img.decode();}catch(_){}resolve(url);};
-      img.onerror=()=>{imageCache.delete(url);reject(new Error('Картина не загрузилась. Проверьте соединение и обновите страницу — ваши выборы сохранены в браузере.'));};
-      img.src=url;
-    });imageCache.set(url,promise);return promise;
+    if(imageCache.has(url))return imageCache.get(url).promise;
+    const img=new Image();let loaded,failed;
+    const promise=new Promise((resolve,reject)=>{loaded=resolve;failed=reject;});
+    // Retain the Image and don't block a background tab on img.decode().
+    imageCache.set(url,{img,promise});
+    const timer=setTimeout(()=>img.onerror(),20000);
+    img.onload=()=>{clearTimeout(timer);loaded(url);};
+    img.onerror=()=>{clearTimeout(timer);imageCache.delete(url);failed(new Error('Картина не загрузилась. Проверьте соединение и обновите страницу — ваши выборы сохранены в браузере.'));};
+    img.src=url;
+    if(img.complete&&img.naturalWidth){clearTimeout(timer);loaded(url);}
+    return promise;
   }
   function preloadAhead(ballot){
     const byId=new Map(state.artworks.map(a=>[a.id,a]));
