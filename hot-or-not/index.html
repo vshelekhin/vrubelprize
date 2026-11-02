@@ -7,9 +7,9 @@
   <meta name="description" content="Тестовое парное голосование Премии Михаила Врубеля.">
   <title>Выбор зрителя — Премия Михаила Врубеля</title>
   <link rel="icon" href="../favicon.svg">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20">
   <script src="config.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=20" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -23,7 +23,7 @@
       <div class="welcome-copy">
         <p class="eyebrow">ПРЕМИЯ МИХАИЛА ВРУБЕЛЯ · ВЫБОР ЗРИТЕЛЯ</p>
         <h1>Какая картина<br>откликается тебе?</h1>
-        <p class="welcome-description">Две работы. Одно впечатление.<br>Выбирай ту, которая нравится больше,<br>и переходи к следующей паре.</p>
+        <p class="welcome-description">Две работы. Одно впечатление.<br>Сделай 20 выборов — каждый поможет<br>определить любимые картины зрителей.</p>
         <form id="entry-form" class="entry-form">
           <label for="viewer-name">Как тебя записать?</label>
           <div class="entry-row"><input id="viewer-name" name="name" autocomplete="name" maxlength="80" placeholder="Имя, фамилия или псевдоним" required><button class="gold-button" id="start" type="submit">Начать <span aria-hidden="true">→</span></button></div>
@@ -55,8 +55,8 @@
           <button class="choose-button" type="button" data-side="1">Выбрать эту картину <span>→</span></button>
         </article>
       </div>
-      <div id="finished" class="finished" hidden><p class="eyebrow">ВСЕ ПАРЫ ПРОЙДЕНЫ</p><h2>Спасибо за твой взгляд.</h2><p>Ты сравнил все 190 пар. Каждый выбор сохранён.</p><button id="finish-change" class="gold-button" type="button">Войти под другим именем</button></div>
-      <div class="voting-footer"><div class="progress"><span id="progress-text">Сравнений: 0 из 190</span><div class="progress-line"><i id="progress-fill"></i></div></div><p>Правильного ответа нет.<br>Доверься своему впечатлению.</p><span class="keyboard-hint">Выбрать: <kbd>←</kbd> <kbd>→</kbd></span></div>
+      <div id="finished" class="finished" hidden><p class="eyebrow">ГОЛОСОВАНИЕ ЗАВЕРШЕНО</p><h2>Спасибо за твой взгляд.</h2><p id="finish-description">Все 20 выборов сохранены. Спасибо за участие!</p><div class="finish-actions"><button id="continue" class="gold-button" type="button" hidden>Продолжить — ещё 20</button><button id="finish-change" class="text-button" type="button">Войти под другим именем</button></div></div>
+      <div class="voting-footer"><div class="progress"><span id="progress-text">Сравнений: 0 из 20</span><div class="progress-line"><i id="progress-fill"></i></div></div><p>Правильного ответа нет.<br>Доверься своему впечатлению.</p><span id="keyboard-hint" class="keyboard-hint">Выбрать: <kbd>←</kbd> <kbd>→</kbd></span></div>
     </section>
     <div id="message" class="message" role="status" aria-live="polite"></div>
     <button id="retry" class="retry text-button" type="button" hidden>Повторить сохранение</button>

@@ -10,7 +10,7 @@
   const ready=new Promise((resolve,reject)=>{readyResolve=resolve;readyReject=reject;});
   ready.catch(()=>{});
   function message(text,error=false){$('message').textContent=text;$('message').classList.toggle('error',error);}
-  function setBusy(value){busy=value;document.body.classList.toggle('busy',value);document.querySelectorAll('.choose-button,.image-choice').forEach(b=>b.disabled=value||!imagesReady);$('start').disabled=value;$('change-name').disabled=value;}
+  function setBusy(value){busy=value;document.body.classList.toggle('busy',value);document.querySelectorAll('.choose-button,.image-choice').forEach(b=>b.disabled=value||!imagesReady);$('start').disabled=value;$('change-name').disabled=value;$('continue').disabled=value;}
   window.addEventListener('message',event=>{
     const m=event.data;
     if(!m||m.app!=='vrubel-pilot'||m.channel!==channel)return;
@@ -51,6 +51,10 @@
     $('progress-text').textContent='Сравнений: '+next.count+' из '+next.total;
     $('progress-fill').style.width=100*next.count/next.total+'%';
     $('comparison').hidden=!next.pair;$('finished').hidden=!!next.pair;
+    $('finish-description').textContent=next.canContinue?'Все '+next.total+' выборов сохранены. Спасибо за участие!':'Все выборы сохранены. Спасибо за участие!';
+    $('continue').hidden=!next.canContinue;
+    $('continue').textContent='Продолжить — ещё '+next.nextTotal;
+    $('keyboard-hint').hidden=!next.pair;
     if(!next.pair)return;
     const ids=['art-left','art-right'],numbers=['number-left','number-right'];
     await Promise.all(next.pair.map((art,i)=>new Promise((resolve,reject)=>{
@@ -85,6 +89,12 @@
       const next=await rpc(payload);safeStore.remove(key);await render(next);message('');
     }catch(error){message(error.message,true);$('retry').hidden=!safeStore.get(key);}finally{setBusy(false);}
   }
+  async function continueVoting(){
+    if(busy||!state?.canContinue)return;
+    setBusy(true);message('Готовим следующие пары…');
+    try{await render(await rpc({action:'continue',name:state.name,sessionTarget:state.sessionTarget}));message('');}
+    catch(error){message(error.message,true);}finally{setBusy(false);}
+  }
   function changeName(){
     if(busy)return;imagesReady=false;state=null;$('voting').hidden=true;$('welcome').hidden=false;$('retry').hidden=true;message('');$('viewer-name').value='';$('viewer-name').focus();
   }
@@ -102,6 +112,7 @@
   });
   $('entry-form').addEventListener('submit',enter);
   $('change-name').addEventListener('click',changeName);$('finish-change').addEventListener('click',changeName);
+  $('continue').addEventListener('click',continueVoting);
   $('retry').addEventListener('click',()=>choose(0));
   window.addEventListener('resize',fitImages);
   const previous=safeStore.get(storageKey);if(previous)$('viewer-name').value=previous;
