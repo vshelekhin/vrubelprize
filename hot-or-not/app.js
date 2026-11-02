@@ -10,7 +10,7 @@
   const ready=new Promise((resolve,reject)=>{readyResolve=resolve;readyReject=reject;});
   ready.catch(()=>{});
   function message(text,error=false){$('message').textContent=text;$('message').classList.toggle('error',error);}
-  function setBusy(value){busy=value;document.body.classList.toggle('busy',value);document.querySelectorAll('.choose-button,.image-choice').forEach(b=>b.disabled=value||!imagesReady);$('start').disabled=value;$('change-name').disabled=value;$('continue').disabled=value;}
+  function setBusy(value){busy=value;document.body.classList.toggle('busy',value);document.querySelectorAll('.choose-button,.image-choice').forEach(b=>b.disabled=value||!imagesReady);$('start').disabled=value;$('change-name').disabled=value;}
   window.addEventListener('message',event=>{
     const m=event.data;
     if(!m||m.app!=='vrubel-pilot'||m.channel!==channel)return;
@@ -27,8 +27,8 @@
   });
   if(window.PILOT_CONFIG?.backendUrl){
     $('sheet-bridge').src=window.PILOT_CONFIG.backendUrl+'?origin='+encodeURIComponent(location.origin)+'&channel='+encodeURIComponent(channel);
-    setTimeout(()=>{if(!bridgeWindow)readyReject(new Error('Не удалось подключиться к таблице. Обнови страницу и попробуй ещё раз.'));},35000);
-  }else readyReject(new Error('Обработчик таблицы ещё подключается. Попробуй чуть позже.'));
+    setTimeout(()=>{if(!bridgeWindow)readyReject(new Error('Не удалось подключиться к таблице. Обновите страницу и попробуйте ещё раз.'));},35000);
+  }else readyReject(new Error('Обработчик таблицы ещё подключается. Попробуйте чуть позже.'));
   async function rpc(payload){
     await ready;const id=crypto.randomUUID();
     return new Promise((resolve,reject)=>{
@@ -51,14 +51,13 @@
     $('progress-text').textContent='Сравнений: '+next.count+' из '+next.total;
     $('progress-fill').style.width=100*next.count/next.total+'%';
     $('comparison').hidden=!next.pair;$('finished').hidden=!!next.pair;
-    $('finish-description').textContent=next.canContinue?'Все '+next.total+' выборов сохранены. Спасибо за участие!':'Все выборы сохранены. Спасибо за участие!';
-    $('continue').hidden=!next.canContinue;
-    $('continue').textContent='Продолжить — ещё '+next.nextTotal;
+    document.querySelector('.voting-heading').hidden=!next.pair;
+    $('decision-hint').hidden=!next.pair;
     $('keyboard-hint').hidden=!next.pair;
     if(!next.pair)return;
     const ids=['art-left','art-right'],numbers=['number-left','number-right'];
     await Promise.all(next.pair.map((art,i)=>new Promise((resolve,reject)=>{
-      const img=$(ids[i]);img.onload=resolve;img.onerror=()=>reject(new Error('Картина не загрузилась. Обнови страницу — голос пока не отправлен.'));
+      const img=$(ids[i]);img.onload=resolve;img.onerror=()=>reject(new Error('Картина не загрузилась. Обновите страницу — голос пока не отправлен.'));
       img.alt='Картина № '+art.id.slice(-2);img.src=art.image;
       $(numbers[i]).textContent='Работа № '+art.id.slice(-2);
       if(img.complete&&img.naturalWidth)resolve();
@@ -89,12 +88,6 @@
       const next=await rpc(payload);safeStore.remove(key);await render(next);message('');
     }catch(error){message(error.message,true);$('retry').hidden=!safeStore.get(key);}finally{setBusy(false);}
   }
-  async function continueVoting(){
-    if(busy||!state?.canContinue)return;
-    setBusy(true);message('Готовим следующие пары…');
-    try{await render(await rpc({action:'continue',name:state.name,sessionTarget:state.sessionTarget}));message('');}
-    catch(error){message(error.message,true);}finally{setBusy(false);}
-  }
   function changeName(){
     if(busy)return;imagesReady=false;state=null;$('voting').hidden=true;$('welcome').hidden=false;$('retry').hidden=true;message('');$('viewer-name').value='';$('viewer-name').focus();
   }
@@ -111,8 +104,7 @@
     if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();choose(event.key==='ArrowLeft'?0:1);}
   });
   $('entry-form').addEventListener('submit',enter);
-  $('change-name').addEventListener('click',changeName);$('finish-change').addEventListener('click',changeName);
-  $('continue').addEventListener('click',continueVoting);
+  $('change-name').addEventListener('click',changeName);
   $('retry').addEventListener('click',()=>choose(0));
   window.addEventListener('resize',fitImages);
   const previous=safeStore.get(storageKey);if(previous)$('viewer-name').value=previous;

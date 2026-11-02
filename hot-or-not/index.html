@@ -9,7 +9,7 @@
   <link rel="icon" href="../favicon.svg">
   <link rel="stylesheet" href="style.css?v=20">
   <script src="config.js" defer></script>
-  <script src="app.js?v=20" defer></script>
+  <script src="app.js?v=20-final" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -22,12 +22,12 @@
     <section id="welcome" class="welcome">
       <div class="welcome-copy">
         <p class="eyebrow">ПРЕМИЯ МИХАИЛА ВРУБЕЛЯ · ВЫБОР ЗРИТЕЛЯ</p>
-        <h1>Какая картина<br>откликается тебе?</h1>
-        <p class="welcome-description">Две работы. Одно впечатление.<br>Сделай 20 выборов — каждый поможет<br>определить любимые картины зрителей.</p>
+        <h1>Какая картина<br>откликается вам?</h1>
+        <p class="welcome-description">Две работы. Одно впечатление.<br>Сделайте 20 выборов — каждый поможет<br>определить любимые картины зрителей.</p>
         <form id="entry-form" class="entry-form">
-          <label for="viewer-name">Как тебя записать?</label>
+          <label for="viewer-name">Как вас записать?</label>
           <div class="entry-row"><input id="viewer-name" name="name" autocomplete="name" maxlength="80" placeholder="Имя, фамилия или псевдоним" required><button class="gold-button" id="start" type="submit">Начать <span aria-hidden="true">→</span></button></div>
-          <p class="form-hint">Можно ввести любое имя. В следующий раз введи его же,<br>чтобы продолжить с того места, где остановился.</p>
+          <p class="form-hint">Укажите то же имя при повторном входе —<br>ваши предыдущие выборы будут сохранены.</p>
         </form>
       </div>
       <div class="welcome-art" aria-hidden="true">
@@ -39,7 +39,7 @@
 
     <section id="voting" class="voting" hidden>
       <div class="voting-heading">
-        <div><p class="eyebrow">ВЫБОР ЗРИТЕЛЯ</p><h1>Какая картина нравится больше?</h1></div>
+        <div><p class="eyebrow">ВЫБОР ЗРИТЕЛЯ</p><h1>Какая картина нравится вам больше?</h1></div>
         <div class="viewer"><span id="viewer-label"></span><button id="change-name" class="text-button" type="button">Сменить имя</button></div>
       </div>
       <div id="comparison" class="comparison">
@@ -55,8 +55,8 @@
           <button class="choose-button" type="button" data-side="1">Выбрать эту картину <span>→</span></button>
         </article>
       </div>
-      <div id="finished" class="finished" hidden><p class="eyebrow">ГОЛОСОВАНИЕ ЗАВЕРШЕНО</p><h2>Спасибо за твой взгляд.</h2><p id="finish-description">Все 20 выборов сохранены. Спасибо за участие!</p><div class="finish-actions"><button id="continue" class="gold-button" type="button" hidden>Продолжить — ещё 20</button><button id="finish-change" class="text-button" type="button">Войти под другим именем</button></div></div>
-      <div class="voting-footer"><div class="progress"><span id="progress-text">Сравнений: 0 из 20</span><div class="progress-line"><i id="progress-fill"></i></div></div><p>Правильного ответа нет.<br>Доверься своему впечатлению.</p><span id="keyboard-hint" class="keyboard-hint">Выбрать: <kbd>←</kbd> <kbd>→</kbd></span></div>
+      <div id="finished" class="finished" hidden><p class="eyebrow">ГОЛОСОВАНИЕ ЗАВЕРШЕНО</p><h2>Спасибо за участие!</h2><p id="finish-description">Все ваши голоса сохранены. Голосование завершено.</p></div>
+      <div class="voting-footer"><div class="progress"><span id="progress-text">Сравнений: 0 из 20</span><div class="progress-line"><i id="progress-fill"></i></div></div><p id="decision-hint">Правильного ответа нет.<br>Доверьтесь своему впечатлению.</p><span id="keyboard-hint" class="keyboard-hint">Выбрать: <kbd>←</kbd> <kbd>→</kbd></span></div>
     </section>
     <div id="message" class="message" role="status" aria-live="polite"></div>
     <button id="retry" class="retry text-button" type="button" hidden>Повторить сохранение</button>
