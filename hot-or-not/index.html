@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Тестовое парное голосование Премии Михаила Врубеля.">
+  <title>Выбор зрителя — Премия Михаила Врубеля</title>
+  <link rel="icon" href="../favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Премия Михаила Врубеля — главная"><span>ПРЕМИЯ</span><strong>Михаила Врубеля</strong></a>
+    <div class="header-caption">ИСКУССТВО НАЧИНАЕТСЯ С ВПЕЧАТЛЕНИЯ</div>
+    <span class="pilot-tag"><i></i> Тестовое голосование</span>
+  </header>
+
+  <main>
+    <section id="welcome" class="welcome">
+      <div class="welcome-copy">
+        <p class="eyebrow">ПРЕМИЯ МИХАИЛА ВРУБЕЛЯ · ВЫБОР ЗРИТЕЛЯ</p>
+        <h1>Какая картина<br>откликается тебе?</h1>
+        <p class="welcome-description">Две работы. Одно впечатление.<br>Выбирай ту, которая нравится больше,<br>и переходи к следующей паре.</p>
+        <form id="entry-form" class="entry-form">
+          <label for="viewer-name">Как тебя записать?</label>
+          <div class="entry-row"><input id="viewer-name" name="name" autocomplete="name" maxlength="80" placeholder="Имя, фамилия или псевдоним" required><button class="gold-button" id="start" type="submit">Начать <span aria-hidden="true">→</span></button></div>
+          <p class="form-hint">Можно ввести любое имя. В следующий раз введи его же,<br>чтобы продолжить с того места, где остановился.</p>
+        </form>
+      </div>
+      <div class="welcome-art" aria-hidden="true">
+        <figure class="preview-one"><img src="images/09.jpg" alt=""><figcaption>У каждой картины — свой зритель</figcaption></figure>
+        <figure class="preview-two"><img src="images/05.jpg" alt=""></figure>
+        <div class="art-seal">20<span>картин</span></div>
+      </div>
+    </section>
+
+    <section id="voting" class="voting" hidden>
+      <div class="voting-heading">
+        <div><p class="eyebrow">ВЫБОР ЗРИТЕЛЯ</p><h1>Какая картина нравится больше?</h1></div>
+        <div class="viewer"><span id="viewer-label"></span><button id="change-name" class="text-button" type="button">Сменить имя</button></div>
+      </div>
+      <div id="comparison" class="comparison">
+        <article class="art-card" data-side="0">
+          <div class="image-space"><button class="image-choice" type="button" aria-label="Выбрать левую картину"><img id="art-left" alt="Левая картина"></button></div>
+          <div class="art-meta"><span id="number-left"></span><button class="zoom-button" data-side="0" type="button" aria-label="Увеличить левую картину"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6M10 7v6M7 10h6"/></svg>Увеличить</button></div>
+          <button class="choose-button" type="button" data-side="0">Выбрать эту картину <span>←</span></button>
+        </article>
+        <div class="or-badge" aria-hidden="true">или</div>
+        <article class="art-card" data-side="1">
+          <div class="image-space"><button class="image-choice" type="button" aria-label="Выбрать правую картину"><img id="art-right" alt="Правая картина"></button></div>
+          <div class="art-meta"><span id="number-right"></span><button class="zoom-button" data-side="1" type="button" aria-label="Увеличить правую картину"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6M10 7v6M7 10h6"/></svg>Увеличить</button></div>
+          <button class="choose-button" type="button" data-side="1">Выбрать эту картину <span>→</span></button>
+        </article>
+      </div>
+      <div id="finished" class="finished" hidden><p class="eyebrow">ВСЕ ПАРЫ ПРОЙДЕНЫ</p><h2>Спасибо за твой взгляд.</h2><p>Ты сравнил все 190 пар. Каждый выбор сохранён.</p><button id="finish-change" class="gold-button" type="button">Войти под другим именем</button></div>
+      <div class="voting-footer"><div class="progress"><span id="progress-text">Сравнений: 0 из 190</span><div class="progress-line"><i id="progress-fill"></i></div></div><p>Правильного ответа нет.<br>Доверься своему впечатлению.</p><span class="keyboard-hint">Выбрать: <kbd>←</kbd> <kbd>→</kbd></span></div>
+    </section>
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+    <button id="retry" class="retry text-button" type="button" hidden>Повторить сохранение</button>
+  </main>
+  <footer class="site-footer"><span>ПРЕМИЯ МИХАИЛА ВРУБЕЛЯ</span><span>Пилот · 20 работ · каждый выбор имеет значение</span></footer>
+  <dialog id="zoom-dialog"><button id="close-zoom" class="close-zoom" type="button" aria-label="Закрыть увеличенную картину">×</button><img id="zoom-image" alt="Картина крупным планом"></dialog>
+  <iframe id="sheet-bridge" title="Сохранение голосов" hidden></iframe>
+</body>
+</html>

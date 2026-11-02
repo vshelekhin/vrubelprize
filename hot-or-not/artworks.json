@@ -1,0 +1,142 @@
+[
+  {
+    "artId": "ART001",
+    "outputFile": "01.jpg",
+    "image": "images/01.jpg",
+    "width": 1119,
+    "height": 1406
+  },
+  {
+    "artId": "ART002",
+    "outputFile": "02.jpg",
+    "image": "images/02.jpg",
+    "width": 1129,
+    "height": 1393
+  },
+  {
+    "artId": "ART003",
+    "outputFile": "03.jpg",
+    "image": "images/03.jpg",
+    "width": 1144,
+    "height": 1375
+  },
+  {
+    "artId": "ART004",
+    "outputFile": "04.jpg",
+    "image": "images/04.jpg",
+    "width": 1155,
+    "height": 1362
+  },
+  {
+    "artId": "ART005",
+    "outputFile": "05.jpg",
+    "image": "images/05.jpg",
+    "width": 1104,
+    "height": 1425
+  },
+  {
+    "artId": "ART006",
+    "outputFile": "06.jpg",
+    "image": "images/06.jpg",
+    "width": 1150,
+    "height": 1367
+  },
+  {
+    "artId": "ART007",
+    "outputFile": "07.jpg",
+    "image": "images/07.jpg",
+    "width": 989,
+    "height": 1274
+  },
+  {
+    "artId": "ART008",
+    "outputFile": "08.jpg",
+    "image": "images/08.jpg",
+    "width": 912,
+    "height": 1111
+  },
+  {
+    "artId": "ART009",
+    "outputFile": "09.jpg",
+    "image": "images/09.jpg",
+    "width": 5353,
+    "height": 3751
+  },
+  {
+    "artId": "ART010",
+    "outputFile": "10.jpg",
+    "image": "images/10.jpg",
+    "width": 4419,
+    "height": 3448
+  },
+  {
+    "artId": "ART011",
+    "outputFile": "11.jpg",
+    "image": "images/11.jpg",
+    "width": 3577,
+    "height": 4278
+  },
+  {
+    "artId": "ART012",
+    "outputFile": "12.jpg",
+    "image": "images/12.jpg",
+    "width": 2486,
+    "height": 4030
+  },
+  {
+    "artId": "ART013",
+    "outputFile": "13.jpg",
+    "image": "images/13.jpg",
+    "width": 3711,
+    "height": 4632
+  },
+  {
+    "artId": "ART014",
+    "outputFile": "14.jpg",
+    "image": "images/14.jpg",
+    "width": 2999,
+    "height": 4096
+  },
+  {
+    "artId": "ART015",
+    "outputFile": "15.jpg",
+    "image": "images/15.jpg",
+    "width": 2875,
+    "height": 4096
+  },
+  {
+    "artId": "ART016",
+    "outputFile": "16.jpg",
+    "image": "images/16.jpg",
+    "width": 2251,
+    "height": 3154
+  },
+  {
+    "artId": "ART017",
+    "outputFile": "17.jpg",
+    "image": "images/17.jpg",
+    "width": 2362,
+    "height": 3357
+  },
+  {
+    "artId": "ART018",
+    "outputFile": "18.jpg",
+    "image": "images/18.jpg",
+    "width": 2756,
+    "height": 1935
+  },
+  {
+    "artId": "ART019",
+    "outputFile": "19.jpg",
+    "image": "images/19.jpg",
+    "width": 2094,
+    "height": 2929
+  },
+  {
+    "artId": "ART020",
+    "outputFile": "20.jpg",
+    "image": "images/20.jpg",
+    "width": 2042,
+    "height": 2902
+  }
+]
