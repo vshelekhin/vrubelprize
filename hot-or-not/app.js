@@ -99,7 +99,6 @@
     $('viewer-label').textContent=state.name;
     $('progress-text').textContent='Сравнений: '+v.count+' из '+state.total;
     $('progress-fill').style.width=100*v.count/state.total+'%';
-    $('saved-text').textContent=v.queue.length?'Сохранено: '+state.count+' из '+v.count:'';$('saved-text').hidden=!v.queue.length;
     $('comparison').hidden=!current;$('finished').hidden=!!current;document.querySelector('.voting-heading').hidden=!current;
     $('decision-hint').hidden=!current;$('keyboard-hint').hidden=!current;
     $('retry').hidden=!syncError||!v.queue.length;message(syncError,!!syncError);controls();

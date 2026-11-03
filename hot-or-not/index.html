@@ -7,9 +7,9 @@
   <meta name="description" content="Тестовое парное голосование Премии Михаила Врубеля.">
   <title>Выбор зрителя — Премия Михаила Врубеля</title>
   <link rel="icon" href="../favicon.svg">
-  <link rel="stylesheet" href="style.css?v=fast1">
+  <link rel="stylesheet" href="style.css?v=pairs1">
   <script src="config.js" defer></script>
-  <script src="app.js?v=fast2" defer></script>
+  <script src="app.js?v=pairs1" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -23,7 +23,8 @@
       <div class="welcome-copy">
         <p class="eyebrow">ПРЕМИЯ МИХАИЛА ВРУБЕЛЯ · ВЫБОР ЗРИТЕЛЯ</p>
         <h1>Какая картина<br>откликается вам?</h1>
-        <p class="welcome-description">Две работы. Одно впечатление.<br>Сделайте 20 выборов — каждый поможет<br>определить любимые картины зрителей.</p>
+        <p class="welcome-description">Вам будут показаны 20 пар, составленных из 20 акварелей. В каждой паре выберите картину, которая вам больше нравится.</p>
+        <p class="welcome-instructions">Нажмите на картину или кнопку под ней — либо используйте стрелки ← и → на клавиатуре. Чтобы рассмотреть работу, нажмите «Увеличить».<br>Вы увидите все 20 картин в разных сочетаниях. После 20 выборов голосование завершится.</p>
         <form id="entry-form" class="entry-form">
           <label for="viewer-name">Как вас записать?</label>
           <div class="entry-row"><input id="viewer-name" name="name" autocomplete="name" maxlength="80" placeholder="Имя, фамилия или псевдоним" required><button class="gold-button" id="start" type="submit">Начать <span aria-hidden="true">→</span></button></div>
@@ -56,7 +57,7 @@
         </article>
       </div>
       <div id="finished" class="finished" hidden><p id="finish-eyebrow" class="eyebrow">ГОЛОСОВАНИЕ ЗАВЕРШЕНО</p><h2 id="finish-title">Спасибо за участие!</h2><p id="finish-description">Все ваши голоса сохранены. Голосование завершено.</p></div>
-      <div class="voting-footer"><div class="progress"><span id="progress-text">Сравнений: 0 из 20</span><div class="progress-line"><i id="progress-fill"></i></div><span id="saved-text" class="saved-text" hidden></span></div><p id="decision-hint">Правильного ответа нет.<br>Доверьтесь своему впечатлению.</p><span id="keyboard-hint" class="keyboard-hint">Можно выбирать стрелками ← → на клавиатуре</span></div>
+      <div class="voting-footer"><div class="progress"><span id="progress-text">Сравнений: 0 из 20</span><div class="progress-line"><i id="progress-fill"></i></div></div><p id="decision-hint">Правильного ответа нет.<br>Доверьтесь своему впечатлению.</p><span id="keyboard-hint" class="keyboard-hint">Можно выбирать стрелками ← → на клавиатуре</span></div>
     </section>
     <div id="message" class="message" role="status" aria-live="polite"></div>
     <button id="retry" class="retry text-button" type="button" hidden>Повторить сохранение</button>
